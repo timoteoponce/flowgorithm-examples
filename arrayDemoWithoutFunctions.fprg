@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-05 07:09:30 "/>
+        <attribute name="created" value="YWRtaW47QURNSU4tUEM7MjAxOS0xMC0wNTsiMDc6MDE6MTYgIjsyMjYy"/>
+        <attribute name="edited" value="YWRtaW47QURNSU4tUEM7MjAxOS0xMC0wNTsiMDc6MDk6MzAgIjsxOzIzNzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter the array size: &quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="friends" type="String" array="True" size="n"/>
+            <declare name="friendName" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="Size(friends) - 1" direction="inc" step="1">
+                <output expression="&quot;Please enter a new name&quot;" newline="True"/>
+                <input variable="friendName"/>
+                <assign variable="friends[i]" expression="friendName"/>
+            </for>
+            <for variable="i" start="0" end="Size(friends) - 1" direction="inc" step="1">
+                <output expression="&quot;Array[&quot; &amp; i &amp; &quot;] = &quot; &amp; friends[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
